@@ -1,6 +1,5 @@
-import dotenv from 'dotenv';
-dotenv.config({ path: '.env.deploy' });
-
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+require('dotenv').config({ path: '.env.deploy' });
 const {
   DEPLOY_USER,
   DEPLOY_HOST,
