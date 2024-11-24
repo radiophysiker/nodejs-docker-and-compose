@@ -23,7 +23,7 @@ module.exports = {
       repo: 'https://github.com/radiophysiker/nodejs-docker-and-compose.git',
       path: DEPLOY_PATH,
       'pre-deploy-local': `scp .env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/current/backend`,
-      'post-deploy': 'docker-compose down && docker-compose up -d --build',
+      'post-deploy': 'docker compose down && docker compose up -d --build',
     },
   },
 };
