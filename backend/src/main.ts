@@ -11,13 +11,6 @@ async function bootstrap() {
   const reflector = app.get(Reflector);
   app.useGlobalGuards(new JwtAuthGuard(reflector));
 
-  // Для локальной разработки с фронтендом на https://no-perfect.nomorepartiesco.ru/
-  app.enableCors({
-    origin: 'https://no-perfect.nomorepartiesco.ru',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-  });
-
   await app.listen(4000);
 }
 bootstrap();
